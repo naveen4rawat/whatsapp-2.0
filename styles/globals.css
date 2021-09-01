@@ -27,3 +27,10 @@ a {
   font-size: 0px;
   cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+  .bm-burger-button {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+  }
+}

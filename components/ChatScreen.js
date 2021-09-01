@@ -136,23 +136,43 @@ const Header = styled.div`
   align-items: center;
   border-bottom: 1px solid whitesmoke;
   padding-left: 90px;
+  @media only screen and (max-width: 600px) {
+    height: 50px;
+    padding-left: 50px;
+  }
 `;
 const HeaderInformation = styled.div`
   margin-left: 15px;
   flex: 1;
   > h3 {
     margin-bottom: 3px;
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 0;
+      font-size: 15px;
+    }
   }
   > p {
     font-size: 14px;
     color: grey;
+    @media only screen and (max-width: 600px) {
+      font-size: 10px;
+    }
   }
 `;
-const HeaderIcons = styled.div``;
+const HeaderIcons = styled.div`
+  @media only screen and (max-width: 500px) {
+    height: 20px;
+    display: none;
+  }
+`;
 const MessageContainer = styled.div`
   padding: 75px 30px 75px 30px;
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: #e5ded8;
+  @media only screen and (max-width: 600px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `;
 const EndOfMessage = styled.div``;
 const InputContainer = styled.form`
