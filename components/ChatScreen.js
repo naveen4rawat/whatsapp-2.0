@@ -39,6 +39,7 @@ function ChatScreen({ chat, messages }) {
   };
   const showMessages = () => {
     if (messagesSnapshot) {
+      scrollToBottom();
       return messagesSnapshot.docs.map((message) => (
         <Message
           key={message.id}
@@ -71,7 +72,6 @@ function ChatScreen({ chat, messages }) {
       photoURL: user.photoURL,
     });
     setInput("");
-    scrollToBottom();
   };
   const recipient = recipientSnapshot?.docs?.[0]?.data();
   const recipientEmail = getRecipientEmail(chat.users, user);
@@ -135,6 +135,7 @@ const Header = styled.div`
   height: 80px;
   align-items: center;
   border-bottom: 1px solid whitesmoke;
+  padding-left: 90px;
 `;
 const HeaderInformation = styled.div`
   margin-left: 15px;
@@ -149,8 +150,8 @@ const HeaderInformation = styled.div`
 `;
 const HeaderIcons = styled.div``;
 const MessageContainer = styled.div`
-  padding: 30px;
-  min-height: 90vh;
+  padding: 75px 30px 75px 30px;
+  min-height: 100vh;
   background-color: #e5ded8;
 `;
 const EndOfMessage = styled.div``;
@@ -161,7 +162,7 @@ const InputContainer = styled.form`
   bottom: 0;
   padding: 10px;
   background-color: white;
-  z-index: 100;
+  z-index: 1;
 `;
 const Input = styled.input`
   flex: 1;

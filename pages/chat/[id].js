@@ -5,15 +5,21 @@ import ChatScreen from "../../components/ChatScreen";
 import Sidebar from "../../components/Sidebar";
 import getRecipientEmail from "../../components/utils/getRecipientEmail";
 import { auth, db } from "../../firebase";
+import { slide as Menu } from "react-burger-menu";
+import MenuIcon from "@material-ui/icons/Menu";
 
 function Chat({ messages, chat }) {
   const [user] = useAuthState(auth);
+  // const Responsive = window.innerWidth <= 1000 ? Menu : Responsive;
+
   return (
     <Container>
       <Head>
         <title>Chat with {getRecipientEmail(chat.users, user)}</title>
       </Head>
-      <Sidebar />
+      <Menu left customBurgerIcon={<MenuIcon />} customCrossIcon={false}>
+        <Sidebar />
+      </Menu>
       <ChatContainer>
         <ChatScreen chat={chat} messages={messages} />
       </ChatContainer>
