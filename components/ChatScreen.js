@@ -126,7 +126,8 @@ function ChatScreen({ chat, messages }) {
 export default ChatScreen;
 const Container = styled.div``;
 const Header = styled.div`
-  position: sticky;
+  position: absolute;
+  width: 100%;
   top: 0;
   background-color: white;
   z-index: 1;
