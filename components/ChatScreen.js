@@ -166,19 +166,23 @@ const HeaderIcons = styled.div`
   }
 `;
 const MessageContainer = styled.div`
-  padding: 75px 30px 75px 30px;
-  min-height: 80vh;
+  padding: 75px 30px 40px 30px;
+  margin-bottom: 50px;
+  min-height: 100%;
+  position: relative;
   background-color: #e5ded8;
   @media only screen and (max-width: 600px) {
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 10px;
   }
 `;
 const EndOfMessage = styled.div``;
 const InputContainer = styled.form`
   display: flex;
   align-items: center;
-  position: sticky;
+  position: absolute;
+  width: 100%;
   bottom: 0;
   padding: 10px;
   background-color: white;
@@ -192,4 +196,7 @@ const Input = styled.input`
   background-color: whitesmoke;
   padding: 20px;
   margin: 0 15px 0 15px;
+  @media only screen and (max-width: 600px) {
+    padding: 10px;
+  }
 `;
