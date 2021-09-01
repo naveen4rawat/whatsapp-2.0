@@ -182,7 +182,7 @@ const EndOfMessage = styled.div``;
 const InputContainer = styled.form`
   display: flex;
   align-items: center;
-  position: absolute;
+  position: sticky;
   width: 100%;
   bottom: 0;
   padding: 10px;
