@@ -167,15 +167,14 @@ const HeaderIcons = styled.div`
   }
 `;
 const MessageContainer = styled.div`
-  padding: 75px 30px 40px 30px;
-  margin-bottom: 50px;
+  padding: 75px 30px 70px 30px;
   min-height: 100%;
   position: relative;
   background-color: #e5ded8;
   @media only screen and (max-width: 600px) {
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 50px;
   }
 `;
 const EndOfMessage = styled.div``;
